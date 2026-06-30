@@ -11,7 +11,7 @@ function filtrarUsuarios() {
         const ramal = linha.id
         const setor = linha.getAttribute('data-setor').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
 
-        const bateuTexto = nome.includes(busca) || ramal.includes(busca) || setorTexto.includes(busca);
+        const bateuTexto = nome.includes(busca) || ramal.includes(busca) || setor.includes(busca);
         const bateuSetor = setorSelecionado === 'todos' || setorSelecionado === setor.toLowerCase();
 
         if (bateuTexto && bateuSetor) {
